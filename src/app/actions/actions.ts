@@ -85,14 +85,9 @@ export async function ClearUserCart() {
   return data;
 }
 export async function GetAllBrands() {
-  const token = await getuserToken();
-  if (!token) {
-    throw new Error("not token");
-  }
   const respons = await fetch(`https://ecommerce.routemisr.com/api/v1/brands`, {
     method: "GET",
     headers: {
-      token: token,
       "Content-Type": "application/json",
     },
   });
@@ -271,8 +266,6 @@ export async function VerifyResetCode(resetCode: string) {
 }
 
 export async function getUserOrders(productId: string) {
-
-
   const response = await fetch(
     `https://ecommerce.routemisr.com/api/v1/orders/user/${productId}`,
   );
