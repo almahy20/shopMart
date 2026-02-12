@@ -1,7 +1,7 @@
 import {
   loginschemaType,
   registerschemaType,
-} from "@/lib/authschema/auth.schema";
+} from "@/app/lib/authschema/auth.schema";
 
 const API_URL = process.env.NEXT_PUBLIC_BASE_URL;
 console.log("API_URL:", API_URL);

@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Field, FieldError, FieldLabel } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
 import { Spinner } from "@/components/ui/spinner";
-import { loginschema, loginschemaType } from "@/lib/authschema/auth.schema";
+import { loginschema, loginschemaType } from "@/app/lib/authschema/auth.schema";
 import { signinuser } from "@/serveses/auth.serveses";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter } from "next/navigation";

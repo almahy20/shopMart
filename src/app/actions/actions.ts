@@ -1,6 +1,6 @@
 "use server";
 
-import { getuserToken } from "@/lib/auth";
+import { getuserToken } from "@/app/lib/auth";
 
 export async function addcard(productId: string) {
   const token = await getuserToken();

@@ -6,7 +6,7 @@ import { Spinner } from "@/components/ui/spinner";
 import {
   registerschema,
   registerschemaType,
-} from "@/lib/authschema/auth.schema";
+} from "@/app/lib/authschema/auth.schema";
 import { signupuser } from "@/serveses/auth.serveses";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Link from "next/link";
