@@ -11,7 +11,7 @@ export default function myaccount() {
         <UpdateUserPassword />
         <ForgotPassworduser />
       </div>
-      <div className="button mt-20  px-2 col-span-4 bg-amber-800">page</div>
+      <div className="button mt-20  px-2 col-span-4">page</div>
     </div>
   );
 }
