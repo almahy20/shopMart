@@ -8,5 +8,5 @@ export async function getuserToken() {
     secret: process.env.AUTH_SECRET!,
   });
 
-  return token?.tokend as string;
+  return token?.token as string;
 }
