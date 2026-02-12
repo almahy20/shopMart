@@ -15,10 +15,13 @@ import {
 import { Field, FieldGroup } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { redirect } from "next/dist/server/api-utils";
 import { useState } from "react";
 import { toast } from "sonner";
+import { useRouter } from "next/navigation";
 
 export default function ForgotPassworduser() {
+  const router = useRouter();
   const [email, setEmail] = useState("");
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -39,6 +42,7 @@ export default function ForgotPassworduser() {
       } else {
         toast.error(data.message, { position: "top-center" });
       }
+      router.push("/VerifyResetCode");
     } catch (error) {
       console.log(error);
       toast.error("error", { position: "top-center" });

@@ -20,7 +20,6 @@ import { toast } from "sonner";
 
 export default function Verifyresetcode() {
   const [resetCode, setResetCode] = useState("");
-  const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
 
   async function handleForm(e: React.FormEvent<HTMLFormElement>) {
@@ -31,7 +30,6 @@ export default function Verifyresetcode() {
       const data = await VerifyResetCode(resetCode);
       console.log("data", data);
       if (data.statusMsg == "success") {
-        setOpen(true);
         toast.success(data.message, { position: "top-center" });
       } else {
         toast.error(data.message, { position: "top-center" });
@@ -45,14 +43,8 @@ export default function Verifyresetcode() {
   }
 
   return (
-    <div>
-      <Dialog open={open} onOpenChange={setOpen}>
-        <DialogTrigger asChild>
-          <Button variant="outline" className="w-full mt-20">
-            Forgot Password?
-          </Button>
-        </DialogTrigger>
-
+    <div className="h-screen">
+      <Dialog open={true}>
         <DialogContent className="sm:max-w-sm">
           <form onSubmit={handleForm} className="space-y-4">
             <DialogHeader>

@@ -2,7 +2,7 @@
 
 import ForgotPassworduser from "@/components/ForgotPassword/ForgotPassword";
 import UpdateUserPassword from "@/components/UpdateUserPassword/UpdateUserPassword";
-import Verifyresetcode from "../VerifyResetCode/VerifyResetCode";
+import Verifyresetcode from "../VerifyResetCode/page";
 
 export default function myaccount() {
   return (
@@ -10,7 +10,6 @@ export default function myaccount() {
       <div className="button col-span-2  px-2 pl-5 bg-gray-200 ">
         <UpdateUserPassword />
         <ForgotPassworduser />
-        <Verifyresetcode />
       </div>
       <div className="button mt-20  px-2 col-span-4 bg-amber-800">page</div>
     </div>
