@@ -4,6 +4,7 @@ import {
 } from "@/lib/authschema/auth.schema";
 
 const API_URL = process.env.NEXT_PUBLIC_BASE_URL;
+console.log("API_URL:", API_URL);
 
 export async function signupuser(formdata: registerschemaType) {
   const respons = await fetch(`${API_URL}/auth/signup`, {

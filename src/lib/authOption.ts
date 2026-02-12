@@ -20,7 +20,7 @@ export const authOption: NextAuthOptions = {
       authorize: async (credentials) => {
         if (!credentials) return null;
         const data = await signinuser(credentials);
-        console.log(credentials);
+        console.log("dataAuth", data);
         if (data.message === "success") {
           const decodedToken: decodedToken = jwtDecode(data.token);
           return {
@@ -29,7 +29,7 @@ export const authOption: NextAuthOptions = {
             token: data.token,
           };
         } else {
-          throw new Error(data.message);
+          throw new Error(data.message || "eroor");
         }
       },
     }),

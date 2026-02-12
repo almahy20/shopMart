@@ -109,7 +109,8 @@ export async function getWishlist() {
   const token = await getuserToken();
 
   if (!token) {
-    throw new Error("not token");
+    // throw new Error("not token");
+    console.log("kijik");
   }
   const response = await fetch(
     "https://ecommerce.routemisr.com/api/v1/wishlist",
