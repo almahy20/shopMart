@@ -2,7 +2,7 @@
 
 import ForgotPassworduser from "@/components/ForgotPassword/ForgotPassword";
 import UpdateUserPassword from "@/components/UpdateUserPassword/UpdateUserPassword";
-import Verifyresetcode from "../VerifyResetCode/page";
+// import Verifyresetcode from "../VerifyResetCode/page";
 
 export default function myaccount() {
   return (

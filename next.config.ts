@@ -7,17 +7,17 @@ const nextConfig: NextConfig = {
       {
         protocol: "https",
         hostname: "ecommerce.routemisr.com",
-        pathname: "/Route-Academy-categories/*",
+        pathname: "/**",
       },
       {
         protocol: "https",
         hostname: "ecommerce.routemisr.com",
-        pathname: "/Route-Academy-products/*",
+        pathname: "/**",
       },
       {
         protocol: "https",
         hostname: "ecommerce.routemisr.com",
-        pathname: "/Route-Academy-brands/*",
+        pathname: "/**",
       },
     ],
   },

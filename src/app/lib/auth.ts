@@ -8,6 +8,7 @@ export async function getuserToken() {
     token: decodedToken,
     secret: process.env.AUTH_SECRET!,
   });
+  console.log(token?.tokend);
 
   return token?.tokend as string;
 }

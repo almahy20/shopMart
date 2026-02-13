@@ -1,6 +1,6 @@
 "use server";
 
-import { getuserToken } from "@/app/lib/auth";
+import { getuserToken } from "../lib/auth";
 
 export async function addcard(productId: string) {
   const token = await getuserToken();
@@ -109,8 +109,7 @@ export async function getWishlist() {
   const token = await getuserToken();
 
   if (!token) {
-    // throw new Error("not token");
-    console.log("kijik");
+    throw new Error("not token");
   }
   const response = await fetch(
     "https://ecommerce.routemisr.com/api/v1/wishlist",
